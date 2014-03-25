@@ -255,6 +255,34 @@ Reveal.initialize({
 });
 ```
 
+Note that the MidCamp presentation has it's slides forced to use 90% of the window's width. This means that the presentation will flex, and possibly grow taller on a smaller screen. 
+
+```javascript
+Reveal.initialize({
+
+	...
+  width: document.body.offsetWidth * .9,
+	height: 800,
+
+});
+```
+
+This can lead to content "falling below" the visible area of the screen. To avoid this, make use of the 'nested' slides feature.
+
+```html
+<div class="reveal">
+    <div class="slides">
+        ...
+        <section>
+            <section>Vertical Title Slide</section>
+            <section>Vertical Slide 1</section>
+            <section>Vertical Slide 2</section>
+        </section>
+        ...
+    </div>
+</div>
+```
+
 
 ### Auto-sliding
 
@@ -911,9 +939,7 @@ You can change the port by using `grunt serve --port 8001`.
 
 ### Contributing
 
-Please keep the [issue tracker](http://github.com/hakimel/reveal.js/issues) limited to **bug reports**, **feature requests** and **pull requests**. If you are reporting a bug make sure to include information about which browser and operating system you are using as well as the necessary steps to reproduce the issue.
-
-If you have personal support questions use [StackOverflow](http://stackoverflow.com/questions/tagged/reveal.js).
+Please keep the [issue tracker](http://github.com/ThatGuyCND/MidCampReveal/issues) limited to **bug reports**, **feature requests** and **pull requests**. If you are reporting a bug make sure to include information about which browser and operating system you are using as well as the necessary steps to reproduce the issue.
 
 
 #### Pull requests
