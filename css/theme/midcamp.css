@@ -173,11 +173,11 @@ body {
     border-bottom: 1px solid #fcfcfc;
     display: block;
     position: absolute;
-    width: 80%;
-    top: 100px;
+    width: 100%;
+    top: 120px;
     right: 0;
     bottom: auto;
-    left: 20%; }
+    left: 0; }
   .midwest .top-bar {
     display: none; }
 
@@ -264,9 +264,22 @@ ul li {
   ul li li {
     list-style-image: url("../../lib/image/content/star_grey.png"); }
 
+.reveal .progress span {
+  background-color: #df1f26; }
 .reveal .slides {
   text-align: left; }
 .reveal .camp-slide,
 .reveal .title-slide,
 .reveal .media-slide {
   text-align: center; }
+.reveal h1 {
+  font-weight: 900; }
+.reveal h2 {
+  font-weight: 700; }
+.reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-weight: 600; }
+.reveal p, .reveal li {
+  font-weight: 500; }
+.reveal .invert h1, .reveal .invert h2, .reveal .invert h3, .reveal .invert h4, .reveal .invert h5, .reveal .invert h6, .reveal .invert p {
+  color: #333;
+  text-shadow: 0px 0px 6px white; }

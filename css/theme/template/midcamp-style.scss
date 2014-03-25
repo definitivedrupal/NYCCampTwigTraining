@@ -11,11 +11,11 @@
     border-bottom: 1px solid $white;
     display: block;
     position: absolute;
-    width: 80%;
-    top: 100px;
+    width: 100%;
+    top: 120px;
     right: 0;
     bottom: auto;
-    left: 20%;
+    left: 0;
   }
   
   .midwest & {
@@ -119,6 +119,12 @@ ul {
 
 // Reveal Overrides ----------------------------
 .reveal {
+  .progress {
+    span {
+      background-color: $red;
+    }
+  }
+  
   .slides {
     text-align: left;
   }
@@ -127,6 +133,29 @@ ul {
   .title-slide,
   .media-slide {
     text-align: center;
+  }
+  
+  h1 {
+    font-weight: 900;
+  }
+  
+  h2 {
+    font-weight: 700;
+  }
+  
+  h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+  
+  p, li {
+    font-weight: 500;
+  }
+  
+  .invert {
+    h1, h2, h3, h4, h5, h6, p {
+      color: #333;
+      text-shadow: 0px 0px 6px rgba(255,255,255,1);
+    }
   }
 }
 // ---------------------------------------------
