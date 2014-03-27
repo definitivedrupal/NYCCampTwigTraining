@@ -1,3 +1,10 @@
+/* Typography */
+strike {
+  color: #333;
+  opacity: 0.8;
+}
+
+/* Specific Slide Formatting */
 #presenters {
   .presenter {
     width: 50%;
@@ -7,4 +14,14 @@
 
 .presenter--info__facts {
   text-align: left;
+}
+
+/* Layout Classes */
+div[class*="l-"] {
+  display: block;
+  float: left;
+}
+
+.l-fifty {
+  width: 50%;
 }
