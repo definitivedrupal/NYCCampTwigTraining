@@ -1,0 +1,6 @@
+#presenters .presenter {
+  width: 50%;
+  float: left; }
+
+.presenter--info__facts {
+  text-align: left; }
