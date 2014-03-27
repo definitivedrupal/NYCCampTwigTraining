@@ -51,6 +51,14 @@
   font-size: 48px;
   line-height: 64px;
   margin: 1em 0 0;
+  
+  a:link,
+  a:visited,
+  a:hover,
+  a:focus {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .session--info {
