@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/midcamp.css" id="theme">
+    
+    <link rel="stylesheet" href="css/presentation/twig.css" id="presentation-content" />
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -44,8 +46,8 @@
         <h1 class="logo__site-name">MidCamp</h1>
       </div>
       <div class="session--info">
-        <h2 class="session__title">Presentation title <span class="seperator">&nbsp;/&nbsp;</span></h2>
-        <h5 class="session__presenter">Speaker Name</h5>
+        <h2 class="session__title">Drupal 8 Theming: Jump into Twig<span class="seperator">&nbsp;&nbsp;/&nbsp;</span></h2>
+        <h5 class="session__presenter">Forest Mars &amp; Erik Baldwin</h5>
       </div>
     </header>
 
@@ -53,6 +55,7 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+<!--
         <section>
           <h1>Reveal.js</h1>
           <h3>HTML Presentations Made Easy</h3>
@@ -73,7 +76,7 @@
           </aside>
         </section>
 
-        <!-- Example of nested vertical slides -->
+        <!-- Example of nested vertical slides
         <section class="media-slide">
           <section>
             <h2>Vertical Slides</h2>
@@ -369,21 +372,86 @@ function linkify( selector ) {
           <h1>THE END</h1>
           <h3>BY Hakim El Hattab / hakim.se</h3>
         </section>
+-->
         
         <section class="camp-slide" data-state="midwest">
-          <div class="camp--branding">
-            <img src="lib/image/content/logo__large.png" alt="MidCamp 2014" class="camp--logo" />
-            <h1 class="camp--title">MidCamp</h1>
-          </div>
-          <div class="camp--presentation">
-            <h2 class="presentation--title">Presentation Title</h2>
-            <h4 class="speaker--name">Speaker Name</h4>
-          </div>
+          <section id="main-slide">
+            <div class="camp--branding">
+              <img src="lib/image/content/logo__large.png" alt="MidCamp 2014" class="camp--logo" />
+              <h1 class="camp--title">MidCamp</h1>
+            </div>
+            <div class="camp--presentation">
+              <h2 class="presentation--title">Jump into Twig!</h2>
+              <h4 class="speaker--name">Forest Mars &amp; Erik Baldwin</h4>
+            </div>
+          </section>
+          <section id="presenters">
+            <div class="presenter">
+              <div class="presenter--info">
+                <h3 class="presenter--info__name">Forest Mars</h3>
+                <figure>
+                  <img src="images/presenters/forest_lanyrd.jpg" alt="Forest Mars" />
+                  <figcaption>forestmars</figcaption>
+                </figure>
+                <ul class="presenter--info__facts">
+                  <li class="fact"></li>
+                  <li class="fact"></li>
+                  <li class="fact"></li>
+                </ul>
+              </div>
+            </div>
+            <div class="presenter">
+              <div class="presenter--info">
+                <h3 class="presenter--info__name">Erik Baldwin</h3>
+                <figure>
+                  <img src="images/presenters/bladwin.jpg" alt="Erik Baldwin" />
+                  <figcaption>BLadwin</figcaption>
+                </figure>
+                <ul class="presenter--info__facts">
+                  <li class="fact">7 year Drupal'r</li>
+                  <li class="fact">Front End Developer</li>
+                  <li class="fact">Invincible(?)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </section>
         
-        <section class="title-slide">
-          <h1 class="slide--title">Title Slide</h1>
-          <p>Supporting Copy goes here.</p>
+        <section class="title-slide" data-background="images/twig.jpg">
+          <section>
+            <h1 class="slide--title">What is Twig?</h1>
+            <p class="fragment">Twig is a modern template engine for PHP</p>
+          </section>
+          <section>
+            <h2>Why another template engine?</h2>
+            <p class="fragment">&hellip; beside the fact that PHP Template is old, and "broken"</p>
+            <p style="text-align: left">
+              <ul>
+                <li class="fragment roll-in">Concise</li>
+                <li class="fragment roll-in">Template Oriented Syntax</li>
+                <li class="fragment roll-in">Full Featured</li>
+                <li class="fragment roll-in">Easy to Learn</li>
+                <li class="fragment roll-in">Extensibility</li>
+                <li class="fragment roll-in">Unit Tested</li>
+                <li class="fragment roll-in">Documented</li>
+                <li class="fragment roll-in">Secure</li>
+                <li class="fragment roll-in">Clear Error Messages</li>
+                <li class="fragment roll-in">Fast</li>
+              </ul>
+            </p>
+          </section>
+        </section>
+        
+        <section id="basics">
+          <section class="basic--syntax">
+            <h2 class="slide--title"></h2>
+          </section>
+          <section class="basic--functions">
+            <h2 class="slide--title"></h2>
+          </section>
+          <section class="basic--array-obj">
+            <h2 class="slide--title"></h2>
+          </section>
         </section>
 
       </div>
