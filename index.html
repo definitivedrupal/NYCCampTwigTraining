@@ -386,7 +386,7 @@ function linkify( selector ) {
             </div>
           </section>
           <section id="presenters">
-            <div class="presenter">
+            <div class="presenter l-fifty">
               <div class="presenter--info">
                 <h3 class="presenter--info__name">Forest Mars</h3>
                 <figure>
@@ -400,7 +400,7 @@ function linkify( selector ) {
                 </ul>
               </div>
             </div>
-            <div class="presenter">
+            <div class="presenter l-fifty">
               <div class="presenter--info">
                 <h3 class="presenter--info__name">Erik Baldwin</h3>
                 <figure>
@@ -425,8 +425,7 @@ function linkify( selector ) {
           <section>
             <h2>Why another template engine?</h2>
             <p class="fragment">&hellip; beside the fact that PHP Template is old, and "broken"</p>
-            <p style="text-align: left">
-              <ul>
+              <ul style="text-align: left; width: 70%">
                 <li class="fragment roll-in">Concise</li>
                 <li class="fragment roll-in">Template Oriented Syntax</li>
                 <li class="fragment roll-in">Full Featured</li>
@@ -438,21 +437,154 @@ function linkify( selector ) {
                 <li class="fragment roll-in">Clear Error Messages</li>
                 <li class="fragment roll-in">Fast</li>
               </ul>
+          </section>
+        </section>
+        
+        <section id="basics" class="title-slide">
+          <section>
+            <h1 class="slide--title">Twig Basics</h1>
+          </section>
+          <section class="basic--syntax">
+            <p>There are 3 basic operators in Twig:</p>
+            <ul>
+              <li class="fragment roll-in">{{ foo.bar }}</li>
+                <!-- Printing -->
+              <li class="fragment roll-in">{% set var = fubar %}</li>
+                <!-- Setting -->
+              <li class="fragment roll-in">{# comments comments comments #}</li>
+                <!-- Commenting -->
+            </ul>
+          </section>
+          <section class="basic--functions">
+            <p>Use filters to modify variables. <!-- Filters are separated from the variable by a pipe symbol (|) and may have optional arguments in parentheses. Multiple filters can be chained. The output of one filter is applied to the next. --></p>
+            <div class="l-fifty">
+              <h5>Twig Filters</h3>
+              <img src="https://s3-us-west-2.amazonaws.com/droplr.storage/files/acc_4745/KnHc?AWSAccessKeyId=AKIAJSVQN3Z4K7MT5U2A&Expires=1395955695&Signature=o%2Bn8zKTVbAfymfIMVr94um%2FzSmg%3D&response-content-disposition=inline%3B%20filename%3DScreenshot%20on%202014-03-27%20at%2014%3A18%3A53.png%3B" alt="Twig Filters" />
+            </div>
+            <div class="l-fifty">
+              <h5>Drupal Filters &amp; Functions</h3>
+              <ul>
+                <li><span>Translate</span>
+                  <ul>
+                    <li>{{ form.label|t }}</li>
+                  </ul>
+                </li>
+                <li><span><strike>Hide</strike>/Remove</span>
+                  <ul>
+                    <li>{{ attribute|without('class') }}</li>
+                  </ul>
+                </li>
+                <li><span>URL [changes to an alias]</span>
+                  <ul>
+                    <li>{{ url('node/1') }}</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="basic--array-obj">
+            <p></p>
+          </section>
+        </section>
+        
+        <section id="data-layer" class="title-slide">
+          <section>
+            <h1 class="slide--title">Data Interaction</h1>
+          </section>
+          <section>
+            <h2 class="slide--title">Dot Notation FTMFW!</h2>
+            <p>&nbsp;</p>
+            <p>You can use a dot (.) to access attributes of a variable (methods or properties of a PHP object, or items of a PHP array), or the so-called "subscript" syntax ([])</p>
+            <p>
+              <pre><code data-trim>
+{{ foo.bar }}
+{{ foo['bar'] }}</code></pre>
+            </p>
+          </section>
+          <section>
+            <p>When the attribute contains special characters (like - that would be interpreted as the minus operator), use the attribute function instead to access the variable attribute:</p>
+            <p>
+              <pre><code data-trim>
+{# equivalent to the non-working foo.data-foo #}
+{{ attribute(foo, 'data-foo') }}</code></pre>
             </p>
           </section>
         </section>
         
-        <section id="basics">
-          <section class="basic--syntax">
+        <section id="templates" class="title-slide">
+          <section class="namespacing">
+            <h2 class="slide--title"></h2>
+            <p>
+              <pre><code data-trim></code></pre>
+            </p>
+          </section>
+        </section>
+        
+        <section id="theme-functions" class="title-slide">
+          <section>
+            <h2 class="slide--title"></h2>
+            <p>
+              <pre><code data-trim></code></pre>
+            </p>
+          </section>
+        </section>
+        
+        <section id="debugging" class="title-slide">
+          <section class="debug">
             <h2 class="slide--title"></h2>
           </section>
-          <section class="basic--functions">
+          <section class="autoreload">
             <h2 class="slide--title"></h2>
           </section>
-          <section class="basic--array-obj">
+          <section class="cache">
             <h2 class="slide--title"></h2>
           </section>
         </section>
+        
+        <section id="macros" class="title-slide">
+          <section>
+            <h1 class="slide--title">Macros</h1>
+            <p>Reusable markup templates with variable insertion</p>
+            <p class="fragment roll-in">Think: PHP Template functions for markup</p>
+          </section>
+          <section>
+            <p>
+              <pre><code data-trim></code></pre>
+            </p>
+          </section>
+        </section>
+        
+        <section id="libraries" class="title-slide">
+          <section>
+            <h1 class="slide--title">Libraries</h1>
+            <p class="fragment"></p>
+          </section>
+          <section></section>
+        </section>
+        
+        <section id="attributes" class="title-slide">
+          <section>
+            <h1 class="slide--title">Attributes -- completely different in D8</h1>
+            <p class="fragment">Attributes are now an object</p>
+          </section>
+          <section></section>
+        </section>
+        
+        <section id="documentation" class="title-slide">
+          <section>
+            <h1 class="slide--title">Documentation</h1>
+            <!-- <p class="fragment"></p> -->
+          </section>
+          <section>
+            <p>Twig Documentation is easy to get to, just like it is for PHP.net</p>
+            <ul>
+              <li class="fragment">http://php.net/strtolower</li>
+              <li class="fragment">http://twig.sensiolabs.org/lower</li>
+            </ul>
+          </section>
+        </section>
+        
+        <!-- section#.title-slide>(section>h1.slide--title+p.fragment)(section) -->
 
       </div>
 
