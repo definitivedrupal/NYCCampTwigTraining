@@ -280,6 +280,8 @@ ul li {
   font-weight: 600; }
 .reveal p, .reveal li {
   font-weight: 500; }
+.reveal p {
+  margin-bottom: 1.5em; }
 .reveal .invert h1, .reveal .invert h2, .reveal .invert h3, .reveal .invert h4, .reveal .invert h5, .reveal .invert h6, .reveal .invert p {
   color: #333;
   text-shadow: 0px 0px 6px white; }
