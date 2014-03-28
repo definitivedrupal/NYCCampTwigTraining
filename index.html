@@ -232,44 +232,84 @@
           </section>
           <section>
             <h2 class="slide--title">Filters</h2>
-            <p></p>
+            <p>Check Plain</p>
             <div class="l-fifty">
-              <pre><code data-trim></code></pre>
+              <pre><code data-trim><?php print check_plain($title); ?></code></pre>
             </div>
             <div class="l-fifty">
-              <pre><code data-trim></code></pre>
+              <pre><code data-trim>{{ title|striptags }}</code></pre>
             </div>
-            <p></p>
+            <p>Translate</p>
             <div class="l-fifty">
-              <pre><code data-trim></code></pre>
-            </div>
-            <div class="l-fifty">
-              <pre><code data-trim></code></pre>
-            </div>
-            <p></p>
-            <div class="l-fifty">
-              <pre><code data-trim></code></pre>
+              <pre><code data-trim><?php print t('Home'); ?></code></pre>
             </div>
             <div class="l-fifty">
-              <pre><code data-trim></code></pre>
-            </div>
-            <p></p>
-            <div class="l-fifty">
-              <pre><code data-trim></code></pre>
-            </div>
-            <div class="l-fifty">
-              <pre><code data-trim></code></pre>
-            </div>
-            <p></p>
-            <div class="l-fifty">
-              <pre><code data-trim></code></pre>
-            </div>
-            <div class="l-fifty">
-              <pre><code data-trim></code></pre>
+              <pre><code data-trim>{{ 'Home'|t }}</code></pre>
             </div>
           </section>
           <section>
-            <h2 class="slide--title"></h2>
+            <p>Translate w/ substitutions</p>
+            <div class="l-fifty">
+              <pre><code data-trim><?php print t('Welcome, @username', array('@username' => $user->name)); ?></code></pre>
+            </div>
+            <div class="l-fifty">
+              <pre><code data-trim>{{ 'Welcome, @username'|t({ '@username': user.name }) }}
+
+{% set username = user.name %}
+{% trans %}
+  Welcome, {{ username }}
+{% endtrans %}</code></pre>
+            </div>
+            <p>Implode list</p>
+            <div class="l-fifty">
+              <pre><code data-trim><?php echo implode(', ', $usernames); ?></code></pre>
+            </div>
+            <div class="l-fifty">
+              <pre><code data-trim>{{ usernames | join(', ') }}
+{{ usernames }}</code></pre>
+            </div>
+            <p>Escape</p>
+            <div class="l-fifty">
+              <pre><code data-trim><?php echo check_plain($title); ?></code></pre>
+            </div>
+            <div class="l-fifty">
+              <pre><code data-trim>{{ title|e }}
+{{ title }}</code></pre>
+            </div>
+          </section>
+          <section>
+            <h2 class="slide--title">White Space Control</h2>
+            <p>Whitespace?!</p>
+            <p class="fragment">Yeah! That _stuff_ the separates markup tags from output content variables.</p>
+            <div class="fragment">
+              <p>D8 theming handbook guidelines</p>
+              <pre><code data-trim><div class="body">
+  {{- block.content -}}
+</div></code></pre>
+            </div>
+            <div class="fragment">
+              <div>is the same as typing:</div>
+              <pre><code data-trim><div class="body">{{ block.content }}</div></code></pre>
+            </div>
+            <section>
+              <p>Twig Documentation</p>
+              <div class="fragment">
+                <pre><code data-trim>{% spaceless %}
+  <div>
+    <strong>foo bar</strong>
+  </div>
+{% endspaceless %}
+
+{# output will be <div><strong>foo bar</strong></div> #}</code></pre>
+              </div>
+              <div class="fragment">
+                <pre><code data-trim>{% set value = 'no spaces' %}
+<li>    {{- value }}    </li>
+
+{# outputs '<li>no spaces    </li>' #}</code></pre>
+              </div>
+              <p class="fragment highlight-red">NOTE: None of these will remove new lines. WTF?!?</p> <!-- GET MORTEN TO SHOW YOU REPLACE FOR NEW LINES -->
+            </section>
           </section>
         </section>
         
