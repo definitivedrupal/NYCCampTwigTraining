@@ -56,7 +56,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         
-        <section class="camp-slide" data-state="midwest">
+        <section id="presenters" class="camp-slide" data-state="midwest">
           <section id="main-slide">
             <div class="camp--branding">
               <img src="lib/image/content/logo__large.png" alt="MidCamp 2014" class="camp--logo" />
@@ -67,34 +67,42 @@
               <h4 class="speaker--name">Forest Mars &amp; Erik Baldwin</h4>
             </div>
           </section>
-          <section id="presenters">
+          <section data-background="images/presenters/LaunchIt.jpg">
+            <h1 class="slide--title">Forest Mars</h1>
             <div class="presenter l-fifty">
               <div class="presenter--info">
-                <h3 class="presenter--info__name">Forest Mars</h3>
+                <!-- <h3 class="presenter--info__name"></h3> -->
                 <figure>
                   <img src="images/presenters/forest_lanyrd.jpg" alt="Forest Mars" />
                   <figcaption>forestmars</figcaption>
                 </figure>
-                <ul class="presenter--info__facts">
-                  <li class="fact"></li>
-                  <li class="fact"></li>
-                  <li class="fact"></li>
-                </ul>
               </div>
             </div>
+            <div class="l-fifty">
+              <ul class="presenter--info__facts">
+                <li class="fact"></li>
+                <li class="fact"></li>
+                <li class="fact"></li>
+              </ul>
+            </div>
+          </section>
+          <section data-background="images/presenters/CND.jpg">
+            <h1 class="slide--title">Erik Baldwin</h1>
             <div class="presenter l-fifty">
               <div class="presenter--info">
-                <h3 class="presenter--info__name">Erik Baldwin</h3>
+                <!-- <h3 class="presenter--info__name"></h3> -->
                 <figure>
                   <img src="images/presenters/bladwin.jpg" alt="Erik Baldwin" />
                   <figcaption>BLadwin</figcaption>
                 </figure>
-                <ul class="presenter--info__facts">
-                  <li class="fact">7 year Drupal'r</li>
-                  <li class="fact">Front End Developer</li>
-                  <li class="fact">Invincible(?)</li>
-                </ul>
               </div>
+            </div>
+            <div class="l-fifty">
+              <ul class="presenter--info__facts">
+                <li class="fact">7 year Drupal'r</li>
+                <li class="fact">Front End Developer</li>
+                <li class="fact">Invincible(?)</li>
+              </ul>
             </div>
           </section>
         </section>
@@ -127,7 +135,7 @@
             <h1 class="slide--title">PHP Template </br><span style="font-size: 0.5em">&ndash; vs &ndash;</span></br> Twig</h1>
           </section>
           <section>
-            <h2 class="slide--title">Docblock</h2>
+            <p class="reverse-p">Docblock</p>
             <div class="l-fifty">
               <pre><code><?php
 /**
@@ -147,46 +155,46 @@
           </section>
           <section>
             <h2 class="slide--title">File &amp; Function names</h2>
-            <p>File Names</p>
+            <p class="reverse-p">File Names</p>
             <div class="l-fifty">
               <pre><code data-trim>node--article.tpl.php</code></pre>
             </div>
             <div class="l-fifty">
               <pre><code data-trim>node--article.html.twig</code></pre>
             </div>
-            <p>Function Names</p>
+            <p class="reverse-p">Function Names</p>
             <div class="l-fifty">
               <pre><code data-trim>theme_node_links()</code></pre>
             </div>
             <div class="l-fifty">
               <pre><code data-trim>node-links.html.twig</code></pre>
             </div>
-            <p class="fragment">that's right, all theme functions are now markup files. wewt!</p>
+            <p class="fragment reverse-p">that's right, all theme functions are now markup files. wewt!</p>
           </section>
           <section>
             <h2 class="slide--title">Variables</h2>
-            <p>Printing a variable</p>
+            <p class="reverse-p">Printing a variable</p>
             <div class="l-fifty">
               <pre><code data-trim><div class="content"><?php print $content; ?></div></code></pre>
             </div>
             <div class="l-fifty">
               <pre><code data-trim><div class="content">{{ content }}</div></code></pre>
             </div>
-            <p>Printing a hash key item</p>
+            <p class="reverse-p">Printing a hash key item</p>
             <div class="l-fifty">
               <pre><code data-trim><?php print $item['#item']['alt']; ?></code></pre>
             </div>
             <div class="l-fifty">
               <pre><code data-trim>{{ item['#item'].alt }}</code></pre>
             </div>
-            <p>Assigning a variable</p>
+            <p class="reverse-p">Assigning a variable</p>
             <div class="l-fifty">
               <pre><code data-trim><?php $custom_var = $content->comments; ?></code></pre>
             </div>
             <div class="l-fifty">
               <pre><code data-trim>{% set custom_var = content.comments %}</code></pre>
             </div>
-            <p>Assigning an array</p>
+            <p class="reverse-p">Assigning an array</p>
             <div class="l-fifty">
               <pre><code data-trim><?php $args = array('!author' => $author, '!date' => $created); ?></code></pre>
             </div>
@@ -232,14 +240,14 @@
           </section>
           <section>
             <h2 class="slide--title">Filters</h2>
-            <p>Check Plain</p>
+            <p class="reverse-p">Check Plain</p>
             <div class="l-fifty">
               <pre><code data-trim><?php print check_plain($title); ?></code></pre>
             </div>
             <div class="l-fifty">
               <pre><code data-trim>{{ title|striptags }}</code></pre>
             </div>
-            <p>Translate</p>
+            <p class="reverse-p">Translate</p>
             <div class="l-fifty">
               <pre><code data-trim><?php print t('Home'); ?></code></pre>
             </div>
@@ -248,7 +256,7 @@
             </div>
           </section>
           <section>
-            <p>Translate w/ substitutions</p>
+            <p class="reverse-p">Translate w/ substitutions</p>
             <div class="l-fifty">
               <pre><code data-trim><?php print t('Welcome, @username', array('@username' => $user->name)); ?></code></pre>
             </div>
@@ -260,7 +268,7 @@
   Welcome, {{ username }}
 {% endtrans %}</code></pre>
             </div>
-            <p>Implode list</p>
+            <p class="reverse-p">Implode list</p>
             <div class="l-fifty">
               <pre><code data-trim><?php echo implode(', ', $usernames); ?></code></pre>
             </div>
@@ -268,7 +276,7 @@
               <pre><code data-trim>{{ usernames | join(', ') }}
 {{ usernames }}</code></pre>
             </div>
-            <p>Escape</p>
+            <p class="reverse-p">Escape</p>
             <div class="l-fifty">
               <pre><code data-trim><?php echo check_plain($title); ?></code></pre>
             </div>
@@ -279,8 +287,8 @@
           </section>
           <section>
             <h2 class="slide--title">White Space Control</h2>
-            <p>Whitespace?!</p>
-            <p class="fragment">Yeah! That _stuff_ the separates markup tags from output content variables.</p>
+            <p class="reverse-p">Whitespace?!</p>
+            <p class="fragment reverse-p">Yeah! That _stuff_ the separates markup tags from output content variables.</p>
             <div class="fragment">
               <p>D8 theming handbook guidelines</p>
               <pre><code data-trim><div class="body">
@@ -291,25 +299,27 @@
               <div>is the same as typing:</div>
               <pre><code data-trim><div class="body">{{ block.content }}</div></code></pre>
             </div>
-            <section>
-              <p>Twig Documentation</p>
-              <div class="fragment">
-                <pre><code data-trim>{% spaceless %}
-  <div>
-    <strong>foo bar</strong>
-  </div>
+          </section>
+          <section>
+            <div class="fragment">
+              <p class="reverse-p">Twig Documentation</p>
+              <pre><code data-trim>{% spaceless %}
+<div>
+  <strong>foo bar</strong>
+</div>
 {% endspaceless %}
 
 {# output will be <div><strong>foo bar</strong></div> #}</code></pre>
-              </div>
-              <div class="fragment">
-                <pre><code data-trim>{% set value = 'no spaces' %}
+            </div>
+            <div class="fragment">
+              <pre><code data-trim>{% set value = 'no spaces' %}
 <li>    {{- value }}    </li>
 
 {# outputs '<li>no spaces    </li>' #}</code></pre>
-              </div>
-              <p class="fragment highlight-red">NOTE: None of these will remove new lines. WTF?!?</p> <!-- GET MORTEN TO SHOW YOU REPLACE FOR NEW LINES -->
-            </section>
+            </div>
+            <div class="fragment">
+              <p class="fragment highlight-red reverse-p">NOTE: None of these will remove new lines. WTF?!?</p>
+            </div>
           </section>
         </section>
         
@@ -323,7 +333,7 @@
               <li class="fragment roll-in">{{ foo.bar }}</li>
                 <!-- Printing -->
               <li class="fragment roll-in">{% set var = fubar %}</li>
-                <!-- Setting -->
+                <!-- Block -->
               <li class="fragment roll-in">{# comments comments comments #}</li>
                 <!-- Commenting -->
             </ul>
@@ -332,7 +342,7 @@
             <p>Use filters to modify variables. <!-- Filters are separated from the variable by a pipe symbol (|) and may have optional arguments in parentheses. Multiple filters can be chained. The output of one filter is applied to the next. --></p>
             <div class="l-fifty">
               <h5>Twig Filters</h3>
-              <img src="https://s3-us-west-2.amazonaws.com/droplr.storage/files/acc_4745/KnHc?AWSAccessKeyId=AKIAJSVQN3Z4K7MT5U2A&Expires=1395955695&Signature=o%2Bn8zKTVbAfymfIMVr94um%2FzSmg%3D&response-content-disposition=inline%3B%20filename%3DScreenshot%20on%202014-03-27%20at%2014%3A18%3A53.png%3B" alt="Twig Filters" />
+              <img src="images/filters.png" alt="Twig Filters" />
             </div>
             <div class="l-fifty">
               <h5>Drupal Filters &amp; Functions</h3>
@@ -356,7 +366,7 @@
             </div>
           </section>
           <section class="basic--array-obj">
-            <p></p>
+            <p>Basic JS array obj?!?</p>
           </section>
         </section>
         
@@ -386,16 +396,21 @@
         
         <section id="templates" class="title-slide">
           <section class="namespacing">
-            <h2 class="slide--title"></h2>
+            <h2 class="slide--title">Template Inheritance</h2>
             <p>
-              <pre><code data-trim></code></pre>
+              <pre><code data-trim>{# /path/to/template/layout.html.twig #}
+
+{% extends '@bartik/templates/page.html.twig' %}
+{% block sidebar %}
+  <!-- your overrides would go here -->
+{% endblock sidebar %}</code></pre>
             </p>
           </section>
         </section>
         
         <section id="theme-functions" class="title-slide">
           <section>
-            <h2 class="slide--title"></h2>
+            <h2 class="slide--title">Theme Functions</h2>
             <p>
               <pre><code data-trim></code></pre>
             </p>
@@ -403,14 +418,38 @@
         </section>
         
         <section id="debugging" class="title-slide">
+          <section>
+            <h1 class="slide--title">Twig Debugging</h1>
+            <p>&nbsp;</p>
+            <p>By default, the Twig theming engine compiles templates into PHP code and stores the compiled code in memory. Compiled code is unsuitable for development, since changes in Twig templates are not immediately updated in your Drupal site.</p>
+            <p class="fragment roll-in">Developers can change the environment variables in settings.php to allow for different configuration per environment. Drupal core uses the Settings API to access this information when building the Twig environment.</p>
+          </section>
           <section class="debug">
-            <h2 class="slide--title"></h2>
+            <h2 class="slide--title">Twig Debug</h2>
+            <pre class="fragment"><code>$settings['twig_debug'] = TRUE;</code></pre>
+            <ul class="padded-li">
+              <li class="fragment roll-in">The markup of each Twig template is surrounded by HTML comments that contain theming information, such as template file name suggestions.</li>
+              <li class="fragment roll-in">Note that this debugging markup will cause automated tests that directly check rendered HTML to fail. When running automated tests, 'twig_debug' should be set to FALSE.</li>
+              <li class="fragment roll-in">The dump() function can be used in Twig templates to output information about template variables.</li>
+              <li class="fragment roll-in">Twig templates are automatically recompiled whenever the source code changes (see twig_auto_reload below).</li>
+              <li class="fragment roll-in">Not recommended in production environments <span class="fragment highlight-red">(Default: FALSE)</span>.</li>
+            </ul>
           </section>
           <section class="autoreload">
-            <h2 class="slide--title"></h2>
+            <h2 class="slide--title">Twig Auto-reload</h2>
+            <pre class="fragment"><code>$settings['twig_auto_reload'] = TRUE;</code></pre>
+            <ul class="padded-li">
+              <li class="fragment roll-in">Automatically recompile Twig templates whenever the source code changes. If you don't provide a value for twig_auto_reload, it will be determined based on the value of twig_debug.</li>
+              <li class="fragment roll-in">Not recommended in production environments <span class="fragment highlight-red">(Default: NULL)</span>.</li>
+            </ul>
           </section>
           <section class="cache">
-            <h2 class="slide--title"></h2>
+            <h2 class="slide--title">Twig Cache</h2>
+            <pre class="fragment"><code>$settings['twig_cache'] = FALSE;</code></pre>
+            <ul class="padded-li">
+              <li class="fragment roll-in">By default, Twig templates will be compiled and stored in the filesystem to increase performance. Disabling the Twig cache will recompile the templates from source each time they are used. In most cases the twig_auto_reload setting above should be enabled rather than disabling the Twig cache.</li>
+              <li class="fragment roll-in">Not recommended in production environments <span class="fragment highligh-red">(Default: TRUE).</span></li>
+            </ul>
           </section>
         </section>
         
@@ -421,8 +460,30 @@
             <p class="fragment roll-in">Think: PHP Template functions for markup</p>
           </section>
           <section>
+            <h3 class="slide--title">Macro Example: Menu links</h3>
+            <p class="fragment">
+              <pre><code data-trim>{# menu.twig #}
+{% macro menu_links(links) %}
+  {% if links %}
+    <ul>
+      {% for link in links %}
+        <li>
+          <a href="{{ link.href }}">{{ link.name }}</a>
+          {% if link.links %}
+            {{ _self.menu_links(link.links) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}</code></pre>
+            </p>
             <p>
-              <pre><code data-trim></code></pre>
+              <pre><code data-trim>{# somewhere in a twig template in our theme #}
+{% import "menu.twig" as menu %}
+<nav>
+  {{ menu.menu_links(links) }}
+</nav></code></pre>
             </p>
           </section>
         </section>

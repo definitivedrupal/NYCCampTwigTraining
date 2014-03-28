@@ -4,6 +4,18 @@ strike {
   opacity: 0.8;
 }
 
+.reveal .reverse-p {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+ul.padded-li {
+  li {
+    margin-top: 0.325em;
+    margin-bottom: 0.825em;
+  }
+}
+
 /* Specific Slide Formatting */
 #presenters {
   .presenter {
