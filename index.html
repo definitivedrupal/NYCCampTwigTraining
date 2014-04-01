@@ -240,12 +240,12 @@
           </section>
           <section>
             <h2 class="slide--title">Filters</h2>
-            <p class="reverse-p">Check Plain</p>
+            <p class="reverse-p">Check Plain (escaping)</p>
             <div class="l-fifty">
               <pre><code data-trim><\\?php print check_plain($title); ?></code></pre>
             </div>
             <div class="l-fifty">
-              <pre><code data-trim>{{ title|striptags }}</code></pre>
+              <pre><code data-trim>{{ title|e }}</code></pre>
             </div>
             <p class="reverse-p">Translate</p>
             <div class="l-fifty">
