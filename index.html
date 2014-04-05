@@ -261,7 +261,7 @@
               <pre><code data-trim>&lt;?php print t('Welcome, @username', array('@username' => $user->name)); ?></code></pre>
             </div>
             <div class="l-fifty">
-              <pre><code data-trim>{{ 'Welcome, @username'|t({ '@username': user.name }) }}
+              <pre><code data-trim>{{ 'Welcome, @username'|t({'@username': user.name}) }}
 
 {% set username = user.name %}
 {% trans %}
@@ -273,8 +273,7 @@
               <pre><code data-trim>&lt;?php echo implode(', ', $usernames); ?></code></pre>
             </div>
             <div class="l-fifty">
-              <pre><code data-trim>{{ usernames | join(', ') }}
-{{ usernames }}</code></pre>
+              <pre><code data-trim>{{ usernames|join(', ') }}</code></pre>
             </div>
             <p class="reverse-p">Escape</p>
             <div class="l-fifty">
