@@ -261,6 +261,8 @@ body {
   -ms-box-shadow: none;
   -o-box-shadow: none;
   margin: 0 0 1em; }
+  .reveal section img.image--plain.echidna-logo {
+    margin: 3em 0 0; }
 
 .reveal h1.camp--title {
   font-family: 'flamamediumregular', sans-serif;
