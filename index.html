@@ -500,11 +500,11 @@ function theme_item_list($variables) {
       <h3>{{ title }}</h3>
     {%- endif -%}
     {%- if items -%}
-      <{{ list_type }}{{ attributes }}>
+      &lt;{{ list_type }}{{ attributes }}>
         {%- for item in items -%}
-          <li{{ item.attributes }}>{{ item.value }}</li>
+          &lt;li{{ item.attributes }}>{{ item.value }}</li>
         {%- endfor -%}
-      </{{ list_type }}>
+      &lt;/{{ list_type }}>
     {%- else -%}
       {{- empty -}}
     {%- endif -%}
