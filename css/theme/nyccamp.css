@@ -10,12 +10,14 @@
   src: url("../../lib/font/flamamedium.eot?#iefix") format("embedded-opentype"), url("../../lib/font/flamamedium.woff") format("woff"), url("../../lib/font/flamamedium.ttf") format("truetype"), url("../../lib/font/flamamedium.svg#flamamediumregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'pittet';
   src: url("../../lib/font/pittet-regular-webfont.eot");
   src: url("../../lib/font/pittet-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/pittet-regular-webfont.woff") format("woff"), url("../../lib/font/pittet-regular-webfont.ttf") format("truetype"), url("../../lib/font/pittet-regular-webfont.svg#pittetregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -250,7 +252,7 @@ body {
 .session__presenter {
   text-transform: uppercase; }
 
-.reveal section img.camp--logo {
+.reveal section img.image--plain {
   background: transparent;
   border: medium none;
   box-shadow: none;
