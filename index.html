@@ -495,20 +495,20 @@ function theme_item_list($variables) {
             <div class="l-fifty">
               <pre class="fragment roll-in"><code data-trim>{# /core/modules/system/templates/item-list.html.twig #}
 {%- if items or empty -%}
-  <div class="item-list">
+  &lt;div class="item-list">
     {%- if title -%}
-      <h3>{{ title }}</h3>
+      &lt;h3>{{ title }}&lt;/h3>
     {%- endif -%}
     {%- if items -%}
       &lt;{{ list_type }}{{ attributes }}>
         {%- for item in items -%}
-          &lt;li{{ item.attributes }}>{{ item.value }}</li>
+          &lt;li{{ item.attributes }}>{{ item.value }}&lt;/li>
         {%- endfor -%}
       &lt;/{{ list_type }}>
     {%- else -%}
       {{- empty -}}
     {%- endif -%}
-  </div>
+  &lt;/div>
 {%- endif %}</code></pre>
             </div>
           </section>
@@ -597,24 +597,24 @@ function theme_links($variables) {
 {% if links -%}
   {%- if heading -%}
     {%- if heading.level -%}
-      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+      &lt;{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}&lt;/{{ heading.level }}>
     {%- else -%}
-      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+      &lt;h2{{ heading.attributes }}>{{ heading.text }}&lt;/h2>
     {%- endif -%}
   {%- endif -%}
-  <ul{{ attributes }}>
+  &lt;ul{{ attributes }}>
     {%- for item in links -%}
-      <li{{ item.attributes }}>
+      &lt;li{{ item.attributes }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}
-          <span{{ item.text_attributes }}>{{ item.text }}</span>
+          &lt;span{{ item.text_attributes }}>{{ item.text }}&lt;/span>
         {%- else -%}
           {{ item.text }}
         {%- endif -%}
-      </li>
+      &lt;/li>
     {%- endfor -%}
-  </ul>
+  &lt;/ul>
 {%- endif %}</code></pre>
             </div>
           </section>
