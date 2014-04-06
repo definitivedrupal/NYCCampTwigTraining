@@ -115,12 +115,12 @@
 // List Styles
 ul {
   li {
-    list-style-image: url('../../lib/image/content/star.png');
+    // list-style-image: url('../../lib/image/content/star.png');
     list-style-type: square;
     padding-left: 0.5em !important;
 
     li {
-      list-style-image: url('../../lib/image/content/star_grey.png');
+      // list-style-image: url('../../lib/image/content/star_grey.png');
     }
   }
 }
@@ -169,5 +169,28 @@ ul {
       text-shadow: 0px 0px 6px rgba(255,255,255,1);
     }
   }
+
+  // Logo icon font.
+  i.pittet-logo {
+    // display: inline-block;
+    font-family: pittet;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    clear: both;
+    display: block;
+    margin: 1em;
+    &:before {
+      content: "J";
+      font-size: 80px;
+    }
+  }
+
+
+
 }
 // ---------------------------------------------
+
+

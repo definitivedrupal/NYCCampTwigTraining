@@ -10,6 +10,12 @@
   src: url("../../lib/font/flamamedium.eot?#iefix") format("embedded-opentype"), url("../../lib/font/flamamedium.woff") format("woff"), url("../../lib/font/flamamedium.ttf") format("truetype"), url("../../lib/font/flamamedium.svg#flamamediumregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'pittet';
+  src: url("../../lib/font/pittet-regular-webfont.eot");
+  src: url("../../lib/font/pittet-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/pittet-regular-webfont.woff") format("woff"), url("../../lib/font/pittet-regular-webfont.ttf") format("truetype"), url("../../lib/font/pittet-regular-webfont.svg#pittetregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -262,11 +268,8 @@ body {
   text-transform: none; }
 
 ul li {
-  list-style-image: url("../../lib/image/content/star.png");
   list-style-type: square;
   padding-left: 0.5em !important; }
-  ul li li {
-    list-style-image: url("../../lib/image/content/star_grey.png"); }
 
 .reveal .progress span {
   background-color: #df1f26; }
@@ -289,3 +292,16 @@ ul li {
 .reveal .invert h1, .reveal .invert h2, .reveal .invert h3, .reveal .invert h4, .reveal .invert h5, .reveal .invert h6, .reveal .invert p {
   color: #333;
   text-shadow: 0px 0px 6px white; }
+.reveal i.pittet-logo {
+  font-family: pittet;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  clear: both;
+  display: block;
+  margin: 1em; }
+  .reveal i.pittet-logo:before {
+    content: "J";
+    font-size: 80px; }

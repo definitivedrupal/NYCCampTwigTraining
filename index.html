@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/nyccamp.css" id="theme">
-    
+
     <link rel="stylesheet" href="css/presentation/twig.css" id="presentation-content" />
 
     <!-- For syntax highlighting -->
@@ -39,7 +39,7 @@
   </head>
 
   <body>
-  
+
     <header class="top-bar" role="branding">
       <div class="branding--logo">
         <span class="logo__image"><img src="lib/image/content/logo.png" alt="NYC Camp 2014" height="55px" /></span>
@@ -55,7 +55,7 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        
+
         <section id="presenters" class="camp-slide" data-state="first-slide">
           <section id="main-slide">
             <div class="camp--branding">
@@ -67,33 +67,37 @@
               <h4 class="speaker--name">Joël Pittet &amp; Scott Reeves</h4>
             </div>
           </section>
-          <section data-background="images/presenters/LaunchIt.jpg">
-            <h1 class="slide--title">Forest Mars</h1>
+          <section >
             <div class="presenter l-fifty">
               <div class="presenter--info">
                 <!-- <h3 class="presenter--info__name"></h3> -->
                 <figure>
-                  <img src="images/presenters/forest_lanyrd.jpg" alt="Forest Mars" />
-                  <figcaption>kombucha</figcaption>
+                  <img src="images/presenters/joel.jpg" alt="Joël Pittet" />
+                  <figcaption>joelpittet
+                    <i class="pittet-logo"></i>
+                  </figcaption>
                 </figure>
               </div>
             </div>
             <div class="l-fifty">
+              <h1 class="slide--title">Joël Pittet</h1>
               <ul class="presenter--info__facts">
-                <li class="fact fragment roll-in">Hypermedia Architect</li>
-                <li class="fact fragment roll-in">CTO Launch It</li>
-                <li class="fact fragment roll-in">Drupal NYC & NYC Camp organizer</li>
+                <li class="fact fragment roll-in">Building Websites since 2001ish</li>
+                <li class="fact fragment roll-in">Front and Back End Developer</li>
+                <li class="fact fragment roll-in">Drupal 8 Core Theme System Maintainer</li>
+                <li class="fact fragment roll-in">And obviously love perogies</li>
+
               </ul>
             </div>
           </section>
           <section data-background="images/presenters/CND.jpg">
-            <h1 class="slide--title">Erik Baldwin</h1>
+            <h1 class="slide--title">Scott Reeves</h1>
             <div class="presenter l-fifty">
               <div class="presenter--info">
                 <!-- <h3 class="presenter--info__name"></h3> -->
                 <figure>
-                  <img src="images/presenters/bladwin.jpg" alt="Erik Baldwin" />
-                  <figcaption>BLadwin</figcaption>
+                  <img src="images/presenters/bladwin.jpg" alt="Scott Reeves" />
+                  <figcaption>Cottser</figcaption>
                 </figure>
               </div>
             </div>
@@ -106,7 +110,7 @@
             </div>
           </section>
         </section>
-        
+
         <section class="title-slide" data-background="images/twig.jpg">
           <section>
             <h1 class="slide--title">What is Twig?</h1>
@@ -129,7 +133,7 @@
               </ul>
           </section>
         </section>
-        
+
         <section id="difference" class="title-slide">
           <section>
             <h1 class="slide--title">PHP Template </br><span style="font-size: 0.5em">&ndash; vs &ndash;</span></br> Twig</h1>
@@ -318,13 +322,13 @@
             </div>
           </section>
         </section>
-        
+
         <section id="basics" class="title-slide">
           <section>
             <h1 class="slide--title">Twig Basics</h1>
           </section>
           <section class="basic--syntax">
-            <p>There are 3 basic operators in Twig:</p>
+            <p>There are 3 basic block delimiters in Twig:</p>
             <ul>
               <li class="fragment roll-in">{{ foo.bar }}</li>
                 <!-- Printing -->
@@ -332,6 +336,14 @@
                 <!-- Block -->
               <li class="fragment roll-in">{# comments comments comments #}</li>
                 <!-- Commenting -->
+            </ul>
+            <p></p>
+            <p class="fragment roll-in">And one special string interpolation delimiter.</p>
+            <ul>
+              <li class="fragment roll-in">#{}</li>
+              <li class="fragment roll-in">{{ "foo #{bar} baz" }}</li>
+              <li class="fragment roll-in">{{ "foo #{1 + 2} baz" }}</li>
+              <!-- interpolation -->
             </ul>
           </section>
           <section class="basic--functions">
@@ -362,7 +374,7 @@
             </div>
           </section>
         </section>
-        
+
         <section id="data-layer" class="title-slide">
           <section>
             <h1 class="slide--title">Data Interaction</h1>
@@ -386,7 +398,7 @@
             </p>
           </section>
         </section>
-        
+
         <section id="templates" class="title-slide">
           <section class="namespacing">
             <h2 class="slide--title">Template Inheritance</h2>
@@ -400,7 +412,7 @@
             </p>
           </section>
         </section>
-        
+
         <section id="theme-functions" class="title-slide">
           <section>
             <h2 class="slide--title">Theme Functions</h2>
@@ -534,7 +546,7 @@ function theme_links($variables) {
         // is a string.
         $heading = array(
           'text' => $heading,
-          
+
           // Set the default level of the heading.
           'level' => 'h2',
         );
@@ -621,7 +633,7 @@ function theme_links($variables) {
           <section>
             <h2 class="slide--title">Breadcrumb</h2>
             <p>
-              <pre><code class="php" data-trim>&lt;?php /* includes/theme.inc */ 
+              <pre><code class="php" data-trim>&lt;?php /* includes/theme.inc */
 function theme_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
@@ -650,7 +662,7 @@ function theme_breadcrumb($variables) {
             </p>
           </section>
         </section>
-        
+
         <section id="debugging" class="title-slide">
           <section>
             <h1 class="slide--title">Twig Debugging</h1>
@@ -686,7 +698,7 @@ function theme_breadcrumb($variables) {
             </ul>
           </section>
         </section>
-        
+
         <section id="macros" class="title-slide">
           <section>
             <h1 class="slide--title">Macros</h1>
@@ -721,7 +733,7 @@ function theme_breadcrumb($variables) {
             </p>
           </section>
         </section>
-        
+
         <section id="libraries" class="title-slide">
           <section>
             <h1 class="slide--title">Libraries</h1>
@@ -729,7 +741,7 @@ function theme_breadcrumb($variables) {
           </section>
           <section></section>
         </section>
-        
+
         <section id="attributes" class="title-slide">
           <section>
             <h1 class="slide--title">Attributes -- completely different in D8</h1>
@@ -737,7 +749,7 @@ function theme_breadcrumb($variables) {
           </section>
           <section></section>
         </section>
-        
+
         <section id="documentation" class="title-slide">
           <section>
             <h1 class="slide--title">Documentation</h1>
@@ -751,7 +763,7 @@ function theme_breadcrumb($variables) {
             </ul>
           </section>
         </section>
-        
+
         <!-- section#.title-slide>(section>h1.slide--title+p.fragment)(section) -->
 
       </div>
