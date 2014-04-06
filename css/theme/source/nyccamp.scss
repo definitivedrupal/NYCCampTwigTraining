@@ -74,7 +74,7 @@ $selectionColor: $light-aqua;
 // Background generator
 @mixin bodyBackground() {
   @include radial-gradient( $aqua, $light-aqua );
-  
+
   &:before {
     content: '';
     background-image: url('../../lib/image/background.jpg');
@@ -88,17 +88,13 @@ $selectionColor: $light-aqua;
     bottom: 0;
     left: 0;
     z-index: -1;
-    
-    .midwest & {
-      background-image: url('../../lib/image/background__midwest.jpg');
-    }
   }
 }
 
-// Theme template ------------------------------ 
+// Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
 
 // Theme Specific Markup -----------------------
-@import "../template/midcamp-style";
+@import "../template/nyccamp-style";
 // ---------------------------------------------

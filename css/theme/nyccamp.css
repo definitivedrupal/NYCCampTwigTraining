@@ -10,6 +10,7 @@
   src: url("../../lib/font/flamamedium.eot?#iefix") format("embedded-opentype"), url("../../lib/font/flamamedium.woff") format("woff"), url("../../lib/font/flamamedium.ttf") format("truetype"), url("../../lib/font/flamamedium.svg#flamamediumregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -35,8 +36,6 @@ body {
     bottom: 0;
     left: 0;
     z-index: -1; }
-    .midwest body:before {
-      background-image: url("../../lib/image/background__midwest.jpg"); }
 
 .reveal {
   font-family: "Raleway", "Verdana", "Lucida Grande", "Gill Sans", "Arial", "Helvetica", sans-serif;
@@ -178,7 +177,7 @@ body {
     right: 0;
     bottom: auto;
     left: 0; }
-  .midwest .top-bar {
+  .first-slide .top-bar {
     display: none; }
 
 [role="branding"] {

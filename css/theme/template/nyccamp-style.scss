@@ -5,7 +5,7 @@
   vertical-align: bottom;
   position: relative;
   z-index: 500;
-  
+
   &:after {
     content: '';
     border-bottom: 1px solid $white;
@@ -17,8 +17,8 @@
     bottom: auto;
     left: 0;
   }
-  
-  .midwest & {
+
+  .first-slide & {
     display: none;
   }
 }
@@ -38,7 +38,7 @@
   position: relative;
   top: 0.5em;
   margin-right: 1em;
-  
+
   > img {
     display: inline-block;
     vertical-align: bottom;
@@ -51,7 +51,7 @@
   font-size: 48px;
   line-height: 64px;
   margin: 1em 0 0;
-  
+
   a:link,
   a:visited,
   a:hover,
@@ -64,7 +64,7 @@
 .session--info {
   display: inline-block;
   float: right;
-  
+
   @for $i from 1 through 6 {
     h#{$i} {
       font-weight: normal;
@@ -103,7 +103,7 @@
     font-family: 'flamamediumregular', sans-serif;
     text-transform: none;
   }
-  
+
   h2.presentation--title {
     margin: 1.5em auto 0.5em;
     text-transform: none;
@@ -118,7 +118,7 @@ ul {
     list-style-image: url('../../lib/image/content/star.png');
     list-style-type: square;
     padding-left: 0.5em !important;
-    
+
     li {
       list-style-image: url('../../lib/image/content/star_grey.png');
     }
@@ -132,37 +132,37 @@ ul {
       background-color: $red;
     }
   }
-  
+
   .slides {
     text-align: left;
   }
-  
+
   .camp-slide,
   .title-slide,
   .media-slide {
     text-align: center;
   }
-  
+
   h1 {
     font-weight: 900;
   }
-  
+
   h2 {
     font-weight: 700;
   }
-  
+
   h3, h4, h5, h6 {
     font-weight: 600;
   }
-  
+
   p, li {
     font-weight: 500;
   }
-  
+
   p {
     margin-bottom: 1.5em;
   }
-  
+
   .invert {
     h1, h2, h3, h4, h5, h6, p {
       color: #333;
