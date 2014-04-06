@@ -10,26 +10,25 @@
   src: url("../../lib/font/flamamedium.eot?#iefix") format("embedded-opentype"), url("../../lib/font/flamamedium.woff") format("woff"), url("../../lib/font/flamamedium.ttf") format("truetype"), url("../../lib/font/flamamedium.svg#flamamediumregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #0084b2;
-  background: -moz-radial-gradient(center, circle cover, #6cd2ea 0%, #0084b2 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #6cd2ea), color-stop(100%, #0084b2));
-  background: -webkit-radial-gradient(center, circle cover, #6cd2ea 0%, #0084b2 100%);
-  background: -o-radial-gradient(center, circle cover, #6cd2ea 0%, #0084b2 100%);
-  background: -ms-radial-gradient(center, circle cover, #6cd2ea 0%, #0084b2 100%);
-  background: radial-gradient(center, circle cover, #6cd2ea 0%, #0084b2 100%);
-  background-color: #6cd2ea; }
+  background: #06253e;
+  background: -moz-radial-gradient(center, circle cover, #65abe3 0%, #06253e 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #65abe3), color-stop(100%, #06253e));
+  background: -webkit-radial-gradient(center, circle cover, #65abe3 0%, #06253e 100%);
+  background: -o-radial-gradient(center, circle cover, #65abe3 0%, #06253e 100%);
+  background: -ms-radial-gradient(center, circle cover, #65abe3 0%, #06253e 100%);
+  background: radial-gradient(center, circle cover, #65abe3 0%, #06253e 100%);
+  background-color: #65abe3; }
   body:before {
     content: '';
-    background-image: url("../../lib/image/background.jpg");
+    background-image: url("../../lib/image/background-twig.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.75;
     position: absolute;
     top: 0;
     right: 0;
@@ -45,8 +44,8 @@ body {
   color: #eeeeee; }
 
 ::selection {
-  color: #6cd2ea;
-  background: #0084b2;
+  color: #65abe3;
+  background: #06253e;
   text-shadow: none; }
 
 /*********************************************
@@ -83,7 +82,7 @@ body {
   transition: all .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #0084b2;
+  color: #06253e;
   text-shadow: none;
   border: none; }
 
@@ -130,16 +129,16 @@ body {
   border-top-color: #18545e; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #0084b2; }
+  border-right-color: #06253e; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #0084b2; }
+  border-left-color: #06253e; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #0084b2; }
+  border-bottom-color: #06253e; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #0084b2; }
+  border-top-color: #06253e; }
 
 /*********************************************
  * PROGRESS BAR

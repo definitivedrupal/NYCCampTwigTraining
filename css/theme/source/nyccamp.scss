@@ -38,10 +38,10 @@ $black: #1A1A1A;
 $true-white: #FFF;
 $true-black: #000;
 
-$aqua: #0084B2;
+$aqua: #06253e;
 $deep-aqua: #18545E;
 $muted-aqua: #27546B;
-$light-aqua: #6CD2EA;
+$light-aqua: #65abe3;
 
 $red: #DF1F26;
 
@@ -77,11 +77,11 @@ $selectionColor: $light-aqua;
 
   &:before {
     content: '';
-    background-image: url('../../lib/image/background.jpg');
+    background-image: url('../../lib/image/background-twig.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.75;
     position: absolute;
     top: 0;
     right: 0;
