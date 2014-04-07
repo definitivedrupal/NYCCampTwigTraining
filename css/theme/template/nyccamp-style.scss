@@ -5,6 +5,7 @@
   vertical-align: bottom;
   position: relative;
   z-index: 500;
+  top: -40px;
 
   &:after {
     content: '';
@@ -138,6 +139,7 @@ ul {
 
   .slides {
     text-align: left;
+    margin-top: 60px;
   }
 
   .camp-slide,
@@ -193,6 +195,10 @@ ul {
 
 
 
+}
+
+.first-slide .reveal .slides {
+  margin-top: 0;
 }
 // ---------------------------------------------
 

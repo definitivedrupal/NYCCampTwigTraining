@@ -173,7 +173,8 @@ body {
   margin: 0 auto;
   vertical-align: bottom;
   position: relative;
-  z-index: 500; }
+  z-index: 500;
+  top: -40px; }
   .top-bar:after {
     content: '';
     border-bottom: 1px solid #fcfcfc;
@@ -278,7 +279,8 @@ ul li {
 .reveal .progress span {
   background-color: #df1f26; }
 .reveal .slides {
-  text-align: left; }
+  text-align: left;
+  margin-top: 60px; }
 .reveal .camp-slide,
 .reveal .title-slide,
 .reveal .media-slide {
@@ -309,3 +311,6 @@ ul li {
   .reveal i.pittet-logo:before {
     content: "J";
     font-size: 80px; }
+
+.first-slide .reveal .slides {
+  margin-top: 0; }
