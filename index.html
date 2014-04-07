@@ -647,13 +647,6 @@ function theme_breadcrumb($variables) {
           <section class="debug">
             <h2 class="slide--title">Twig Debug</h2>
             <pre class="fragment"><code>$settings['twig_debug'] = TRUE;</code></pre>
-            <ul class="padded-li">
-              <li class="fragment roll-in">The markup of each Twig template is surrounded by HTML comments that contain theming information, such as template file name suggestions.</li>
-              <li class="fragment roll-in">Note that this debugging markup will cause automated tests that directly check rendered HTML to fail. When running automated tests, 'twig_debug' should be set to FALSE.</li>
-              <li class="fragment roll-in">The dump() function can be used in Twig templates to output information about template variables.</li>
-              <li class="fragment roll-in">Twig templates are automatically recompiled whenever the source code changes (implicitly enables twig_auto_reload).</li>
-              <li class="fragment roll-in">Not recommended in production environments (Default: FALSE).</li>
-            </ul>
           </section>
         </section>
 
