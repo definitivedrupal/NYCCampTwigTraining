@@ -358,16 +358,14 @@
             </div>
           </section>
           <section>
-            <div class="fragment">
-              <p class="reverse-p">Twig Documentation</p>
+              <h2 class="slide--title">Spaceless tag vs. whitespace modifiers</h2>
               <pre><code data-trim>{% spaceless %}
-<div>
-  <strong>foo bar</strong>
-</div>
+  <div>
+    <strong>foo bar</strong>
+  </div>
 {% endspaceless %}
 
 {# output will be <div><strong>foo bar</strong></div> #}</code></pre>
-            </div>
             <div class="fragment">
               <pre><code data-trim>{% set value = 'no spaces' %}
 <li>    {{- value }}    </li>
@@ -382,7 +380,7 @@
             <h1 class="slide--title">Data Interaction</h1>
           </section>
           <section>
-            <h2 class="slide--title">Dot Notation FTMFW!</h2>
+            <h2 class="slide--title">Dot Notation FTW!</h2>
             <p>&nbsp;</p>
             <p>You can use a dot (.) to access attributes of a variable (methods or properties of a PHP object, or items of a PHP array), or the so-called "subscript" syntax ([])</p>
             <p>
@@ -421,31 +419,6 @@
             <p>There are still a lot of core theme functions that need your help!</p>
           </section>
           <section>
-            <h2 class="slide--title">Dates</h2>
-            <p>
-              <pre><code class="php" data-trim>&lt;?php /* @file includes/form.inc */
-function theme_date($variables) {
-  $element = $variables['element'];
-
-  $attributes = array();
-  if (isset($element['#id'])) {
-    $attributes['id'] = $element['#id'];
-  }
-  if (!empty($element['#attributes']['class'])) {
-    $attributes['class'] = (array) $element['#attributes']['class'];
-  }
-  $attributes['class'][] = 'container-inline';
-
-  return '&lt;div' . drupal_attributes($attributes) . '>' . drupal_render_children($element) . '&lt;/div>';
-}
-?></code></pre>
-            </p>
-            <p>
-              <pre class="fragment roll-in"><code data-trim>{# /core/modules/system/templates/datetime/html.twig #}
-<time{{ attributes }}>{{ html ? text|raw : text|escape }}</time></code></pre>
-            </p>
-          </section>
-                    <section>
             <h2 class="slide--title">Item List</h2>
             <div class="l-fifty">
               <pre><code data-trim class="php">&lt;?php /* @file includes/theme.inc */
