@@ -136,6 +136,58 @@
           </section>
         </section>
 
+        <section id="basics" class="title-slide">
+          <section>
+            <h1 class="slide--title">Twig Basics</h1>
+          </section>
+          <section class="basic--syntax">
+            <p>There are 3 basic block delimiters in Twig:</p>
+            <ul>
+              <li class="fragment roll-in">{{ foo.bar }}</li>
+                <!-- Printing -->
+              <li class="fragment roll-in">{% set var = fubar %}</li>
+                <!-- Block -->
+              <li class="fragment roll-in">{# comments comments comments #}</li>
+                <!-- Commenting -->
+            </ul>
+            <p></p>
+            <p class="fragment roll-in">And one special string interpolation delimiter.</p>
+            <ul>
+              <li class="fragment roll-in">#{}</li>
+              <li class="fragment roll-in">{{ "foo #{bar} baz" }}</li>
+              <li class="fragment roll-in">{{ "foo #{1 + 2} baz" }}</li>
+              <!-- interpolation -->
+            </ul>
+          </section>
+          <section class="basic--functions">
+            <p>Use filters to modify variables. <!-- Filters are separated from the variable by a pipe symbol (|) and may have optional arguments in parentheses. Multiple filters can be chained. The output of one filter is applied to the next. --></p>
+            <div class="l-fifty">
+              <h5>Twig Filters</h3>
+              <img src="images/filters.png" alt="Twig Filters" />
+            </div>
+            <div class="l-fifty">
+              <h5>Drupal Filters &amp; Functions</h3>
+              <ul>
+                <li><span>Translate</span>
+                  <ul>
+                    <li>{{ form.label|t }}</li>
+                  </ul>
+                </li>
+                <li><span><strike>Hide</strike>/Remove</span>
+                  <ul>
+                    <li>{{ attribute|without('class') }}</li>
+                  </ul>
+                </li>
+                <li><span>URL [changes to an alias]</span>
+                  <ul>
+                    <li>{{ url('node/1') }}</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
         <section id="difference" class="title-slide">
           <section>
             <h1 class="slide--title">PHP Template </br><span style="font-size: 0.5em">&ndash; vs &ndash;</span></br> Twig</h1>
@@ -321,58 +373,6 @@
 <li>    {{- value }}    </li>
 
 {# outputs '<li>no spaces    </li>' #}</code></pre>
-            </div>
-          </section>
-        </section>
-
-        <section id="basics" class="title-slide">
-          <section>
-            <h1 class="slide--title">Twig Basics</h1>
-          </section>
-          <section class="basic--syntax">
-            <p>There are 3 basic block delimiters in Twig:</p>
-            <ul>
-              <li class="fragment roll-in">{{ foo.bar }}</li>
-                <!-- Printing -->
-              <li class="fragment roll-in">{% set var = fubar %}</li>
-                <!-- Block -->
-              <li class="fragment roll-in">{# comments comments comments #}</li>
-                <!-- Commenting -->
-            </ul>
-            <p></p>
-            <p class="fragment roll-in">And one special string interpolation delimiter.</p>
-            <ul>
-              <li class="fragment roll-in">#{}</li>
-              <li class="fragment roll-in">{{ "foo #{bar} baz" }}</li>
-              <li class="fragment roll-in">{{ "foo #{1 + 2} baz" }}</li>
-              <!-- interpolation -->
-            </ul>
-          </section>
-          <section class="basic--functions">
-            <p>Use filters to modify variables. <!-- Filters are separated from the variable by a pipe symbol (|) and may have optional arguments in parentheses. Multiple filters can be chained. The output of one filter is applied to the next. --></p>
-            <div class="l-fifty">
-              <h5>Twig Filters</h3>
-              <img src="images/filters.png" alt="Twig Filters" />
-            </div>
-            <div class="l-fifty">
-              <h5>Drupal Filters &amp; Functions</h3>
-              <ul>
-                <li><span>Translate</span>
-                  <ul>
-                    <li>{{ form.label|t }}</li>
-                  </ul>
-                </li>
-                <li><span><strike>Hide</strike>/Remove</span>
-                  <ul>
-                    <li>{{ attribute|without('class') }}</li>
-                  </ul>
-                </li>
-                <li><span>URL [changes to an alias]</span>
-                  <ul>
-                    <li>{{ url('node/1') }}</li>
-                  </ul>
-                </li>
-              </ul>
             </div>
           </section>
         </section>
