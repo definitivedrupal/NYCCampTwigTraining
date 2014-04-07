@@ -276,8 +276,6 @@ ul li {
   list-style-type: square;
   padding-left: 0.5em !important; }
 
-.reveal .progress span {
-  background-color: #df1f26; }
 .reveal .slides {
   text-align: left;
   margin-top: 60px; }
