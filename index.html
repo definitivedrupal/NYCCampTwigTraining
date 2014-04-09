@@ -113,6 +113,40 @@
           </section>
         </section>
 
+        <section class="title-slide">
+          <section>
+            <h1 class="slide--title">Drupal 8 theming changes</h1>
+          </section>
+          <section>
+            <h1>YAML</h1>
+            <p>Even in your theme.</p>
+          </section>
+          <section>
+            <h1><strike>Process layer</strike></h1>
+          </section>
+          <section>
+            <h2><strike>template.php</strike></h2>
+            <h2>THEMENAME.theme</h2>
+          </section>
+          <section>
+            <h2>Goodbye theme(), hello render arrays</h2>
+            <h4>Before:</h4>
+            <pre><code class="php">&lt;?php
+$variables['list'] = theme('item_list', array(
+  'items' => $items,
+));
+</code></pre>
+            <h4>After:</h4>
+            <pre><code class="php">&lt;?php
+$variables['list'] = array(
+  '#theme' => 'item_list',
+  '#items' => $items,
+);
+</code></pre>
+<p>Instead of the <strong>list</strong> variable being a flat string of HTML, it's a render array that gets rendered in a Twig template using <code>{{ list }}</code>.
+          </section>
+        </section>
+
         <section class="title-slide" data-background="images/twig.jpg">
           <section>
             <h1 class="slide--title">What is Twig?</h1>
