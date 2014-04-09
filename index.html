@@ -145,6 +145,18 @@ $variables['list'] = array(
 </code></pre>
 <p>Instead of the <strong>list</strong> variable being a flat string of HTML, it's a render array that gets rendered in a Twig template using <code>{{ list }}</code>.
           </section>
+          <section>
+            <h2>No more:</h2>
+            <h3>drupal_add_css()</h3>
+            <h3>drupal_add_js()</h3>
+            <h3>drupal_add_library()</h3>
+            <p>Use <code>#attached</code> on a render array instead. <br />(more on this later)</p>
+          </section>
+          <section>
+            <h1>CSS standards</h1>
+            <p>We have them! They use some things from SMACSS and BEM.</p>
+            <p><a href="https://drupal.org/node/1886770">https://drupal.org/node/1886770</a></p>
+          </section>
         </section>
 
         <section class="title-slide" data-background="images/twig.jpg">
