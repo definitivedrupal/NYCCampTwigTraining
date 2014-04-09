@@ -80,7 +80,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #18545e;
+  color: #13daec;
   text-decoration: none;
   text-shadow: 2px 4px 4px rgba(26, 26, 26, 0.3);
   -webkit-transition: all .15s ease;
@@ -90,13 +90,13 @@ body {
   transition: all .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #06253e;
+  color: #71e9f4;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #081e21; }
+  background: #0d99a5; }
 
 /*********************************************
  * IMAGES
@@ -114,7 +114,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #18545e;
+  border-color: #13daec;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -122,31 +122,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #18545e; }
+  border-right-color: #13daec; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #18545e; }
+  border-left-color: #13daec; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #18545e; }
+  border-bottom-color: #13daec; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #18545e; }
+  border-top-color: #13daec; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #06253e; }
+  border-right-color: #71e9f4; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #06253e; }
+  border-left-color: #71e9f4; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #06253e; }
+  border-bottom-color: #71e9f4; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #06253e; }
+  border-top-color: #71e9f4; }
 
 /*********************************************
  * PROGRESS BAR
@@ -155,7 +155,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #18545e;
+  background: #13daec;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -166,7 +166,7 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #18545e; }
+  color: #13daec; }
 
 .top-bar {
   width: 90%;
